@@ -1,0 +1,38 @@
+{
+	"name": "typify-db",
+	"version": "0.1.1",
+	"description": "Generate TypeScript types from your DB schema",
+	"main": "index.js",
+	"scripts": {
+		"prepare": "npm run build",
+		"build": "tsc"
+	},
+	"files": [
+		"dist/**/*"
+	],
+	"bin": {
+		"typify-db": "./dist/cli.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/marcos-padilla/typify-db.git"
+	},
+	"keywords": [],
+	"author": "Marcos Padilla <marcosalejandro.pd@gmail.com>",
+	"license": "MIT",
+	"type": "commonjs",
+	"devDependencies": {
+		"@types/node": "^22.14.1",
+		"@types/pg": "^8.11.13",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"commander": "^13.1.0",
+		"inquirer": "^12.5.2",
+		"joi": "^17.13.3",
+		"mysql2": "^3.14.0",
+		"pg": "^8.15.1",
+		"sqlite3": "^5.1.7"
+	}
+}
