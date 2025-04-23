@@ -1,3 +1,5 @@
+import pluralize from 'pluralize'
+
 /**
  * Convert a SQL type (postgres/mysql/sqlite) into a TS type.
  */
@@ -49,4 +51,9 @@ export function toPascalCase(str: string): string {
 		.split(/[_\s]+/) // split on underscores or spaces
 		.map((w) => w.charAt(0).toUpperCase() + w.slice(1))
 		.join('')
+}
+
+export function toPascalSingularCase(str: string): string {
+	const singular = pluralize.singular(str)
+	return toPascalCase(singular)
 }

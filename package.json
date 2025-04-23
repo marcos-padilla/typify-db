@@ -1,6 +1,6 @@
 {
 	"name": "typify-db",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Generate TypeScript types from your DB schema",
 	"main": "index.js",
 	"scripts": {
@@ -24,6 +24,7 @@
 	"devDependencies": {
 		"@types/node": "^22.14.1",
 		"@types/pg": "^8.11.13",
+		"@types/pluralize": "^0.0.33",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.8.3"
 	},
@@ -33,6 +34,7 @@
 		"joi": "^17.13.3",
 		"mysql2": "^3.14.0",
 		"pg": "^8.15.1",
+		"pluralize": "^8.0.0",
 		"sqlite3": "^5.1.7"
 	}
 }

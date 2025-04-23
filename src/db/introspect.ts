@@ -1,8 +1,8 @@
-import { Client as PgClient, QueryResult } from 'pg'
 import { Connection as MySqlConnection, RowDataPacket } from 'mysql2/promise'
+import { Client as PgClient, QueryResult } from 'pg'
 import sqlite3 from 'sqlite3'
 import { Config } from '../config'
-import { toPascalCase, mapSqlTypeToTs } from '../utils'
+import { mapSqlTypeToTs, toPascalSingularCase } from '../utils'
 
 import { TableSchema } from '../types'
 
@@ -101,7 +101,11 @@ export async function introspectSchema(
 			toTypeFile() {
 				const lines: string[] = []
 				lines.push(`/** Types for table \`${table_name}\` */`)
-				lines.push(`export interface ${toPascalCase(table_name)} {`)
+				lines.push(
+					`export interface ${toPascalSingularCase(
+						table_name
+					)} {`
+				)
 
 				for (const col of colRows) {
 					const colName =
