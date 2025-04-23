@@ -32,7 +32,7 @@ export function mapSqlTypeToTs(sqlType: string): string {
 		return 'boolean'
 	}
 	if (t.includes('json')) {
-		return 'any'
+		return 'JSON'
 	}
 
 	// fallback for anything else

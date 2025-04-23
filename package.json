@@ -1,6 +1,6 @@
 {
 	"name": "typify-db",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Generate TypeScript types from your DB schema",
 	"main": "index.js",
 	"scripts": {
